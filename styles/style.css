@@ -7,7 +7,7 @@
 nav {
     background-color: #b9a597;
     color: #fff;
-    padding: 25px;
+    padding: 14px 25px;
     display: flex;
     justify-content: space-between;
     align-items: center; 
@@ -19,21 +19,29 @@ nav {
     box-shadow: 0 2px 8px rgba(0,0,0,0.08);
 }
 
+.nav-left {
+    justify-content: flex-start;
+    margin-right: 0;
+}
+
+.nav-left img {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid #fff;
+}
+
+.nav-right {
+    justify-content: flex-end;
+}
+
 nav ul {
     list-style-type: none;
     padding: 0;
     text-align: center;
     display: flex;
     align-items: center;
-}
-
-.nav-left {
-    justify-content: flex-start;
-}
-
-.nav-right {
-    justify-content: flex-end;
-    flex: 1;
 }
 
 nav ul li {
