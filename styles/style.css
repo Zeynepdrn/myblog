@@ -707,4 +707,9 @@ img {
     }
 }
   
+/* Masaüstünde hamburgeri kesin olarak gizle */
+@media (min-width: 1025px) {
+    .hamburger { display: none !important; visibility: hidden; pointer-events: none; }
+}
+  
   
