@@ -13,6 +13,11 @@
         <ul class="nav-left">
             <li><img src="img/zd-logo.png" alt=""></li>
         </ul>
+        <button class="hamburger" aria-label="Menüyü Aç/Kapat" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
         <ul class="nav-right">
             <li><a href="#hero">Ana Sayfa</a></li>
             <li><a href="#about">Hakkımda</a></li>
@@ -170,6 +175,21 @@
           this.classList.remove('active');
         }
       });
+
+      // Hamburger menü toggling
+      const hamburger = document.querySelector('.hamburger');
+      const navRight = document.querySelector('.nav-right');
+      if (hamburger && navRight) {
+        hamburger.addEventListener('click', () => {
+          const isOpen = navRight.classList.toggle('open');
+          hamburger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        });
+        // Linke tıklanınca menüyü kapat
+        navRight.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+          navRight.classList.remove('open');
+          hamburger.setAttribute('aria-expanded', 'false');
+        }));
+      }
     </script>
     <section class="contact-section" id="contact">
       <h2 class="contact-title">İletişim</h2>
